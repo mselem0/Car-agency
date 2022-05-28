@@ -1,0 +1,353 @@
+/* General */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background: #000;
+}
+
+.container {
+  margin: auto;
+  overflow: hidden;
+}
+
+li {
+  list-style: none;
+}
+
+.responsive-img {
+  max-width: 100% !important;
+}
+
+p {
+  line-height: 1.8rem;
+}
+
+ul {padding: 0; margin: 0;}
+.hidden {display: none}
+/* General */
+
+/* Start Navbar */
+.navbar {
+  position: static;
+}
+
+.navbar.sticky {
+    position: fixed;
+    z-index: 9999;
+    width: 80%;
+    top: 15px;
+    left: 10%;
+}
+
+.navbar .logo {
+  float: left
+}
+
+.navbar .list {
+  float: right;
+  padding-top: 25px;
+}
+
+
+.navbar .list li {
+  display: inline-block;
+  padding: 0 1rem
+}
+
+.mob-navbar .list li {
+  display: block;
+  font-size: 4rem;
+}
+
+.navbar .list li a {
+  text-decoration: none;
+  color: #ababab;
+  font-size: 1.1rem;
+}
+
+.navbar .list li a:hover,
+.navbar .list li a.active {
+  border-bottom: 2px solid;
+  color: #fff;
+}
+
+/* End Navbar */
+
+/* Start Mobile Navbar */
+.menu-icon {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  cursor: pointer;
+  display: none;
+  z-index: 9999;
+}
+.mob-navbar.hide-mob-nav {
+  top: -100%
+}
+.mob-navbar {
+  background: #000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  z-index: 9999999;
+  font-size: 4rem;
+  text-align: center;
+  transition: all 1s ease-in-out;
+}
+.mob-navbar .close {
+  color: #fff;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-size: 2rem;
+    cursor: pointer;
+}
+.mob-navbar .logo {
+  float: none
+}
+.mob-navbar .list {
+  float: none
+}
+
+/* End Mobile Navbar */
+
+/* Start Header */
+.header {
+  background-image: url(../images/cover.png);
+  height: 800px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left center;
+  position: relative;
+}
+
+.header h1 {
+  position: absolute;
+  top: 0;
+  left: 48%;
+  z-index: -1;
+  font-size: 8rem;
+  color: #414141;
+  text-transform: uppercase;
+}
+
+.header .down-arrow {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.header .down-arrow img {
+  width: 150px;
+  cursor: pointer;
+  animation: arrowDown 1s infinite alternate ease-in-out;
+}
+
+@keyframes arrowDown {
+  0% {
+    transform: translateY(0);
+  }
+
+  0% {
+    transform: translateY(20px);
+  }
+}
+
+/* End Header */
+
+/* Start cars show */
+.cars-show {
+  padding-top: 4rem;
+  color: #fff;
+}
+
+.cars-show .show {
+  display: flex;
+  padding: 4rem 0;
+}
+
+.cars-show .show .car-box,
+.cars-show .show .content-box {
+  width: 50%
+}
+
+.cars-show .show .content-box {
+  padding: 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cars-show .show .content-box h2 {
+  font-size: 2rem;
+}
+
+.cars-show .show .content-box p {
+  color: #757575;
+}
+
+/* End cars show */
+
+
+/* Start Gallery */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 4rem 0;
+}
+
+.gallery .img-box {
+  width: 40%;
+  padding: 1rem 2rem;
+  margin: 2rem;
+  background-color: #181818;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery .img-box img {
+  object-fit: cover;
+  max-width: 100%;
+}
+
+/* End Gallery */
+
+/* Start Car Of The Year */
+.year_car .header {
+  background-image: url(../images/year_car.jpg);
+  background-size: cover;
+  position: relative;
+  background-position: 50%;
+}
+
+.year_car .header .content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  color: #fff;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+.year_car .header .content h2 {
+  margin: 2rem 0;
+}
+
+.year_car .header .content p {
+  color: yellow;
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: 3rem;
+}
+
+.year_car .header .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #323336c7;
+}
+
+  /* Start Article Section */
+  .year_car .article {
+    background: #fff;
+    padding: 3rem 1rem;
+    text-align: center;
+  }
+
+  .year_car .article h3 {
+    font-size: 3rem;
+    color: #323336c7
+  }
+
+  .year_car .article p {
+    text-align: justify;
+    width: 50%;
+    margin: 2rem auto;
+    color: #6c6c6cc7;
+  }
+
+  .year_car .article .img-box {
+    border-radius: 4px;
+    overflow: hidden;
+    width: 50%;
+    margin: auto;
+    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075) !important;
+    border: 1px solid #3f404269;
+  }
+
+  /* End Article Section */
+
+/* End Car Of The Year */
+
+/* Start About Us Section */
+.about-us {
+  text-align: center;
+  height: 83vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #d9d9d9;
+}
+.about-us h1 {font-size: 4rem;}
+.about-us p {color: dimgrey;}
+.about-us .contact {
+  background: #000;
+  color: #eaeaea;
+  padding: 2rem 0;
+  border-radius: 3px;
+}
+.about-us .contact h3 {font-size: 3rem; margin: 0; margin-bottom: 2rem;}
+.about-us .contact div {
+  font-weight: bold;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+.about-us .contact div span {
+  background-color: brown;
+  padding: 4px;
+  border-radius: 2px;
+  font-size: 1rem;
+}
+/* End About Us Section */
+
+/* Start Footer */
+.footer {
+  background: #000;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+/* End Footer */
